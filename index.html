@@ -1,0 +1,229 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>LUMO & DEEP ❤️</title>
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #191719;
+    color: #eee;
+    font-family: Georgia, serif;
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+.container {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 25px;
+    position: relative;
+    overflow: hidden;
+}
+
+.glow {
+    position: fixed;
+    width: 260px;
+    height: 260px;
+    background: #650e2d;
+    filter: blur(120px);
+    opacity: .45;
+    border-radius: 50%;
+    top: 10%;
+    left: 30%;
+}
+
+.card {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    max-width: 440px;
+    padding: 35px 24px;
+    text-align: center;
+    background: rgba(65, 55, 61, .35);
+    border: 1px solid #794453;
+    border-radius: 22px;
+    box-shadow: 0 0 35px rgba(110, 15, 48, .25);
+}
+
+.moon {
+    font-size: 75px;
+    margin-bottom: 12px;
+    filter: drop-shadow(0 0 15px #a34b69);
+}
+
+h1 {
+    color: #d9a6b5;
+    letter-spacing: 5px;
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+
+.subtitle {
+    color: #aaa;
+    font-size: 13px;
+    letter-spacing: 3px;
+}
+
+.gloves {
+    font-size: 48px;
+    margin: 28px 0 15px;
+}
+
+.line {
+    width: 70px;
+    height: 1px;
+    background: #a85b75;
+    margin: 22px auto;
+}
+
+.letter {
+    color: #ded6d9;
+    font-size: 16px;
+    line-height: 1.9;
+    margin: 20px 0;
+}
+
+.love {
+    color: #e6a2b7;
+    font-size: 27px;
+    letter-spacing: 3px;
+    margin: 25px 0 12px;
+}
+
+.golumolu {
+    color: #b8afb4;
+    font-size: 23px;
+    font-style: italic;
+    letter-spacing: 2px;
+}
+
+.question {
+    color: #e4a0b5;
+    font-size: 22px;
+    margin: 30px 0 20px;
+    letter-spacing: 1px;
+}
+
+button {
+    padding: 13px 27px;
+    border: 1px solid #b56b83;
+    border-radius: 30px;
+    background: #711b3b;
+    color: white;
+    font-size: 15px;
+    cursor: pointer;
+    transition: .3s;
+}
+
+button:hover {
+    background: #a12c54;
+    transform: scale(1.06);
+}
+
+#answer {
+    color: #e9b3c3;
+    margin-top: 22px;
+    font-size: 19px;
+    line-height: 1.7;
+    display: none;
+}
+
+footer {
+    color: #888;
+    font-size: 11px;
+    margin-top: 30px;
+    letter-spacing: 2px;
+}
+
+.star {
+    position: fixed;
+    color: #c98da2;
+    animation: twinkle 3s infinite alternate;
+    pointer-events: none;
+}
+
+@keyframes twinkle {
+    from {opacity: .2; transform: scale(.7);}
+    to {opacity: .9; transform: scale(1.2);}
+}
+</style>
+</head>
+
+<body>
+
+<div class="glow"></div>
+
+<div class="container">
+
+<div class="card">
+
+    <div class="moon">🌙</div>
+
+    <h1>LUMO & DEEP</h1>
+    <p class="subtitle">TWO HEARTS • ONE STORY</p>
+
+    <div class="gloves">🥊</div>
+
+    <div class="line"></div>
+
+    <div class="letter">
+        You are my favourite moon in my darkest sky.<br>
+        I want to choose you, today and every tomorrow.
+    </div>
+
+    <div class="line"></div>
+
+    <div class="love">I LOVE YOU</div>
+
+    <div class="golumolu">GOLUMOLU ❤️</div>
+
+    <div class="question">
+        WILL YOU BE MINE???
+    </div>
+
+    <button onclick="sayYes()">YES, FOREVER ❤️</button>
+
+    <div id="answer">
+        🌙 My favourite person! ❤️<br>
+        Our story starts here...<br>
+        LUMO & DEEP — Forever Special.
+    </div>
+
+    <footer>
+        MADE WITH LOVE ♡ JUST FOR YOU
+    </footer>
+
+</div>
+</div>
+
+<script>
+// Beautiful floating stars
+for (let i = 0; i < 35; i++) {
+    let star = document.createElement("div");
+    star.className = "star";
+    star.innerHTML = "✦";
+    star.style.left = Math.random() * 100 + "vw";
+    star.style.top = Math.random() * 100 + "vh";
+    star.style.fontSize = (8 + Math.random() * 10) + "px";
+    star.style.animationDelay = Math.random() * 3 + "s";
+    document.body.appendChild(star);
+}
+
+function sayYes() {
+    document.getElementById("answer").style.display = "block";
+}
+</script>
+
+</body>
+</html>
